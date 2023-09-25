@@ -24,8 +24,11 @@ header.navbar-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem 0; /* Menggunakan padding-top dan padding-bottom */
+    position: sticky;
+    gap: 2rem;
     z-index: 999;
+    background-color: #FFCC70;
+    border-radius: 15px;
 }
 
 /* Gaya untuk logo dalam header */
@@ -39,6 +42,9 @@ header.navbar-container .nav-list ul {
     display: flex;
     justify-content: center;
     gap: 2rem 1rem;
+    position: sticky;
+    top: 0; /* Menambahkan top: 0; */
+    background-color: #FFCC70; /* Menambahkan background-color */
 }
 
 header.navbar-container .nav-list li {
@@ -56,7 +62,7 @@ header.navbar-container .nav-list li a {
 }
 
 header.navbar-container .nav-list li:hover a {
-    background-color: #EADBC8;
+    background-color: #FFCC70;
     color: white;
   }
    
@@ -171,7 +177,6 @@ main .content .content-description p {
     margin-top: 20px;
   }
   .container{
-    flex: 5;
     display: flex;
     padding: 5rem; 
     flex-flow: column nowrap;
@@ -183,7 +188,7 @@ main .content .content-description p {
     }
   header.navbar-container .nav-list ul{
     flex-wrap: wrap;
-    column-gap: .5rem;
+    column-gap: .4rem;
   }
   main.content{
     flex-direction: column;
