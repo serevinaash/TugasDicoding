@@ -9,22 +9,22 @@
 }
 
 /* Gaya dasar untuk body */
-body {
-    height: 100vh;
-    font-family: 'Quicksand', sans-serif;
-    display: flex;
-    flex-direction: column;
+html, body {
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Gaya untuk header/navbar */
 header.navbar-container {
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto; /* Menggunakan "margin" daripada "margin-inline" */
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 0; /* Menggunakan padding-top dan padding-bottom */
     z-index: 999;
 }
 
@@ -56,136 +56,143 @@ header.navbar-container .nav-list li a {
 }
 
 header.navbar-container .nav-list li:hover a {
-    background-color: #425c77;
+    background-color: #EADBC8;
     color: white;
-}
-
-main {
+  }
+   
+  main {
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
+    margin-inline: auto;
     padding: 2rem 4rem;
     flex: 1;
+   
     display: flex;
+    flex-grow;1;
+    height: 100%;
     align-items: center;
-}
-
-main .content {
+  }
+  main .content {
     flex: 1;
     display: flex;
     align-items: center;
-}
-
-main .content .content-description {
+    padding: 2rem;
+  }
+   
+  main .content .content-description {
     flex: 1 1;
-}
-
-main .content .content-description .title {
+  }
+   
+  main .content .content-description .title {
     font-size: 3.5rem;
-    margin: 1rem 0;
-}
-
+    margin-block: 1rem;
+  }
+   
 main .content .content-description p {
-    line-height: 1.7;
+    line-height: 1.7rem;
     font-size: 1.2rem;
-}
-
-main .content .content-description button {
-    padding: 0.8rem 2.5rem;
-    margin-top: 1rem;
+  }
+   
+  main .content .content-description button {
+    padding: .8rem 2.5rem;
+    margin-block-start: 1rem;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1rem;
     font-family: 'Quicksand', sans-serif;
     color: white;
+   
     border: 3px solid transparent;
     border-radius: 999px;
-    background-color: #2D3E50;
+    background-color: #FFCC70;
     cursor: pointer;
-    transition: all 0.15s ease-in;
-}
-
-main .content .content-description button:hover {
+    transition: all .15s ease-in;
+  }
+   
+  main .content .content-description button:hover {
     border: 3px solid #2D3E50;
     color: #2D3E50;
     background-color: transparent;
-}
-
-main .content .content-image {
+  }
+   
+  main .content .content-image {
     flex: 1;
     display: flex;
-}
-
-main .content .content-image img {
+  }
+   
+  main .content .content-image img {
     margin: auto;
     min-width: 250px;
     width: 300px;
-}
-
-main aside {
+  }
+  main aside {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 80px;
+    inset-block: 0;
+    inset-inline-end: 0;
+  }
+   
+  main aside .social-media {
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-main aside .social-media {
-    display: flex;
-    flex-direction: column;
-}
-
-main aside .social-media ul {
+  }
+   
+  main aside .social-media ul {
     padding: 1.5rem 1rem;
     margin: auto;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
-    background-color: #2D3E50;
+    background-color: #FFCC70;
+   
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-}
-
-main aside .social-media li {
+  }
+   
+  main aside .social-media li {
     list-style-type: none;
-}
-
-main aside .social-media li a {
+  }
+  main aside .social-media li a {
     text-decoration: none;
     font-size: 1.5rem;
     color: white;
-    transition: all 0.1s ease-in-out;
-}
-
-main aside .social-media li a:hover {
+    transition: all .1s ease-in-out;
+  }
+   
+  main aside .social-media li a:hover {
     color: #89b0d9;
-}
+  }
+  .card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 
-@media screen and (max-width: 786px) {
-    header.navbar-container {
-        flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .container{
+    flex: 5;
+    display: flex;
+    padding: 5rem; 
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+  }
+  @media screen and (max-width: 786px){
+    header.navbar-container{
+      flex-direction: column;
     }
-
-    header.navbar-container .nav-list ul {
-        flex-wrap: wrap;
-        column-gap: 0.5rem;
-    }
-
-    main.content {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    main .content .content-description .title {
-        font-size: 3rem;
-    }
-
-    main .content .content-image {
-        order: -1;
-    }
-}
+  header.navbar-container .nav-list ul{
+    flex-wrap: wrap;
+    column-gap: .5rem;
+  }
+  main.content{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  main.content .content-description .title{
+    font-size: 3rem;
+  }
+  main .content .content-image{
+    order:-1;
+  }
+  }
