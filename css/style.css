@@ -15,56 +15,56 @@ html, body {
   display: flex;
   flex-direction: column;
 }
-
+    
 /* Gaya untuk header/navbar */
 header.navbar-container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto; /* Menggunakan "margin" daripada "margin-inline" */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: sticky;
-    gap: 2rem;
-    z-index: 999;
-    background-color: #FFCC70;
-    border-radius: 15px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0; 
+  gap: 2rem;
+  z-index: 999;
+  background-color: #FFCC70;
+  border-radius: 20px;
 }
 
 /* Gaya untuk logo dalam header */
 header.navbar-container .logo img {
-    width: 150px;
+  width: 150px;
 }
 
 /* Gaya untuk daftar navigasi dalam header */
 header.navbar-container .nav-list ul {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem 1rem;
-    position: sticky;
-    top: 0; /* Menambahkan top: 0; */
-    background-color: #FFCC70; /* Menambahkan background-color */
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+  background-color: #FFCC70; /* Menambahkan background-color */
 }
 
 header.navbar-container .nav-list li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 header.navbar-container .nav-list li a {
-    text-decoration: none;
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: black;
-    padding: 0.5rem 1.5rem;
-    border-radius: 999px;
-    transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
 }
 
 header.navbar-container .nav-list li:hover a {
-    background-color: #FFCC70;
-    color: white;
-  }
+  background-color: #FFCC70;
+  color: white;
+}
+
    
   main {
     max-width: 1200px;
@@ -176,28 +176,54 @@ main .content .content-description p {
     padding: 20px;
     margin-top: 20px;
   }
-  .container{
+  .containe r{
     display: flex;
     padding: 5rem; 
     flex-flow: column nowrap;
     gap: 1rem 2rem;
   }
-  @media screen and (max-width: 786px){
-    header.navbar-container{
-      flex-direction: column;
+  @media screen and (max-width: 786px) {
+    header.navbar-container .nav-list .menu {
+        display: none;
     }
-  header.navbar-container .nav-list ul{
-    flex-wrap: wrap;
-    column-gap: .4rem;
+
+    header.navbar-container .nav-list .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header.navbar-container .nav-list .hamburger-menu .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #000;
+        margin: 5px 0;
+    }
+
+    header.navbar-container .nav-list .menu.active {
+      display: flex;
+      flex-direction: column; /* Mengubah tampilan menjadi kolom ke bawah */
+      align-items: center;
+      position: absolute;
+      top: 75px; /* Atur sesuai kebutuhan Anda */
+      left: auto; /* Menghapus left property */
+      right: 0; /* Mengatur right property ke 0 */
+      background-color: #FFCC70;
+      z-index: 1000;
+      border-radius: 0 0 20px 20px;
+      width: 50%;
   }
-  main.content{
-    flex-direction: column;
-    gap: 2rem;
-  }
-  main.content .content-description .title{
-    font-size: 3rem;
-  }
-  main .content .content-image{
-    order:-1;
-  }
-  }
+  
+
+/* Tampilan setiap item menu di kolom ke bawah */
+header.navbar-container .nav-list .menu.active li {
+    padding: 1rem; /* Sesuaikan dengan kebutuhan Anda */
+    text-align: center; /* Pusatkan teks */
+}
+
+    
+}
+
+
+
+

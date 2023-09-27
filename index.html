@@ -16,13 +16,21 @@
             <img src="img/rq2.png" alt="Rumah Quran Saintek">
         </div>
         <nav class="nav-list">
-            <ul>
-                <li><a href="#Beranda">Beranda</a></li>
-                <li><a href="#Tentang">Tentang</a></li>
-                <li><a href="#Galeri">Galeri</a></li>
-                <li><a href="#Kontak">Kontak Kami</a></li>
-            </ul>
+            <div class="menu">
+                <ul>
+                    <li><a href="#Beranda">Beranda</a></li>
+                    <li><a href="#Tentang">Tentang</a></li>
+                    <li><a href="#Galeri">Galeri</a></li>
+                    <li><a href="#Kontak">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
+        
     </header>
 
     <main>
@@ -64,5 +72,15 @@
             </article>
         </div>
     </section>
+    <script>
+        // JavaScript untuk menampilkan dan menyembunyikan menu saat ikon hamburger diklik
+const menuIcon = document.querySelector(".hamburger-menu");
+const menuList = document.querySelector(".menu");
+
+menuIcon.addEventListener("click", () => {
+    menuList.classList.toggle("active");
+});
+
+    </script>
 </body>
 </html>
