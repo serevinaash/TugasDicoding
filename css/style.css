@@ -176,7 +176,7 @@ main .content .content-description p {
     padding: 20px;
     margin-top: 20px;
   }
-  .containe r{
+  .container{
     display: flex;
     padding: 5rem; 
     flex-flow: column nowrap;
@@ -232,22 +232,31 @@ main .content .content-description p {
     color: #333;
     font-weight: bold;
   }
-  .content-image img {
-    width: 30px;
+  .content .content-image .logorq {
+    width: 5px; 
     height: auto;
   }
 
-  .content-description .title {
-    font-size: 14px;
+  .content-description .judul {
+    font-size: 30px;
+  }
+  .content-description .keterangan{
+    font-size: 15px;
+    padding-left: 1px;
+
   }
   @media screen and (max-width: 480px) {
-    .logo img {
-      width: 40px;
-      height: auto; 
+  .content .content-image .logorq {
+      width: 10px; 
     }
   
-    .title {
+    .content-description .judul {
+      font-size: 30px;
+    }
+    .content-description .keterangan {
       font-size: 10px;
+      padding-left: 1px;
+  
     }
   }
 }
