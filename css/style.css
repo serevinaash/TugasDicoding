@@ -250,10 +250,14 @@ main .content .content-description p {
       width: 10px; 
     }
   
-    .content-description .judul {
+    .content .content-description .judul {
       font-size: 30px;
     }
     .content-description .keterangan {
+      font-size: 10px;
+      padding-left: 1px;
+    }
+    .content-description .button {
       font-size: 10px;
       padding-left: 1px;
   
