@@ -100,7 +100,7 @@ main .content .content-description {
   flex: 1 1;
 }
 
-main .content .content-description .judul {
+main .content .content-description .title {
   font-size: 3.5rem;
   margin-block: 1rem;
 }
