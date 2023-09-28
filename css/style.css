@@ -21,11 +21,7 @@ body {
 
 /* Gaya untuk header/navbar */
 header.navbar-container {
-  /* 
-    saran aku sih header bagusnya gini, tapi balik lagi ke selera masing-masing
-    max-width: 1200px; 
-  */
-  width: 100%;
+  max-width: 1200px; 
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -35,7 +31,7 @@ header.navbar-container {
   gap: 2rem;
   z-index: 999;
   background-color: #ffcc70;
-  border-radius: 5px; /*Kalau radius jangan terlalu gede, nanti kurang bagus */
+  border-radius: 3px; 
 }
 
 /* Gaya untuk logo dalam header */
@@ -159,7 +155,6 @@ main aside .social-media ul {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
   background-color: #ffcc70;
-
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -214,7 +209,7 @@ main aside .social-media li a:hover {
 
   header.navbar-container .nav-list .menu.active {
     display: flex;
-    flex-direction: column; /* Mengubah tampilan menjadi kolom ke bawah */
+    flex-direction: column;
     align-items: center;
     position: absolute;
     top: 75px;
@@ -269,5 +264,10 @@ main aside .social-media li a:hover {
       padding-left: 1px;
   
     }
+    main {
+        padding: 2rem 4rem;
+    }
+    .content .content-description .tombol {
+        font-size: 5px;
+      }
   }
-}
