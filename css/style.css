@@ -182,6 +182,7 @@ main .content .content-description p {
     flex-flow: column nowrap;
     gap: 1rem 2rem;
   }
+
   @media screen and (max-width: 786px) {
     header.navbar-container .nav-list .menu {
         display: none;
@@ -199,31 +200,57 @@ main .content .content-description p {
         background-color: #000;
         margin: 5px 0;
     }
+    
 
     header.navbar-container .nav-list .menu.active {
       display: flex;
       flex-direction: column; /* Mengubah tampilan menjadi kolom ke bawah */
       align-items: center;
       position: absolute;
-      top: 75px; /* Atur sesuai kebutuhan Anda */
-      left: auto; /* Menghapus left property */
-      right: 0; /* Mengatur right property ke 0 */
+      top: 75px;
+      left: auto; 
+      right: 0;
       background-color: #FFCC70;
       z-index: 1000;
       border-radius: 0 0 20px 20px;
       width: 50%;
   }
   
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
 
-/* Tampilan setiap item menu di kolom ke bawah */
-header.navbar-container .nav-list .menu.active li {
-    padding: 1rem; /* Sesuaikan dengan kebutuhan Anda */
-    text-align: center; /* Pusatkan teks */
+  .menu ul li {
+    margin: 5px 0;
+  }
+
+  .menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  .content-image img {
+    width: 30px;
+    height: auto;
+  }
+
+  .content-description .title {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 480px) {
+    .logo img {
+      width: 40px;
+      height: auto; 
+    }
+  
+    .title {
+      font-size: 10px;
+    }
+  }
 }
-
-    
-}
-
 
 
 
