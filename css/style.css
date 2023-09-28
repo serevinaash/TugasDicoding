@@ -21,7 +21,11 @@ body {
 
 /* Gaya untuk header/navbar */
 header.navbar-container {
-  max-width: 1200px; 
+  /* 
+    saran aku sih header bagusnya gini, tapi balik lagi ke selera masing-masing
+    max-width: 1200px; 
+  */
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -31,7 +35,7 @@ header.navbar-container {
   gap: 2rem;
   z-index: 999;
   background-color: #ffcc70;
-  border-radius: 3px; 
+  border-radius: 5px; /*Kalau radius jangan terlalu gede, nanti kurang bagus */
 }
 
 /* Gaya untuk logo dalam header */
@@ -96,7 +100,7 @@ main .content .content-description {
   flex: 1 1;
 }
 
-main .content .content-description .title {
+main .content .content-description .judul {
   font-size: 3.5rem;
   margin-block: 1rem;
 }
@@ -155,6 +159,7 @@ main aside .social-media ul {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
   background-color: #ffcc70;
+
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -181,6 +186,7 @@ main aside .social-media li a:hover {
 
   padding: 20px;
   margin-top: 20px;
+  background-color: white;
 }
 .container {
   display: flex;
@@ -209,7 +215,7 @@ main aside .social-media li a:hover {
 
   header.navbar-container .nav-list .menu.active {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Mengubah tampilan menjadi kolom ke bawah */
     align-items: center;
     position: absolute;
     top: 75px;
@@ -260,14 +266,13 @@ main aside .social-media li a:hover {
       font-size: 30px;
     }
     .content-description .keterangan {
-      font-size: 10px;
-      padding-left: 1px;
-  
-    }
-    main {
-        padding: 2rem 4rem;
-    }
-    .content .content-description .tombol {
-        font-size: 5px;
-      }
+      font-size: 10px;     
   }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  
+    padding: 5px;
+    margin-top: 20px;
+  }
+}
