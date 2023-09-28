@@ -1,35 +1,41 @@
 /* Import font dari Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap");
 
 /* Setel box-sizing untuk semua elemen */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Gaya dasar untuk body */
-html, body {
+html,
+body {
   height: 100%;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   display: flex;
   flex-direction: column;
 }
-    
+
 /* Gaya untuk header/navbar */
 header.navbar-container {
-  max-width: 1200px;
+  /* 
+    saran aku sih header bagusnya gini, tapi balik lagi ke selera masing-masing
+    max-width: 1200px; 
+  */
   width: 100%;
-  margin: 0 auto; 
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: sticky;
-  top: 0; 
+  top: 0;
   gap: 2rem;
   z-index: 999;
-  background-color: #FFCC70;
-  border-radius: 20px;
+  background-color: #ffcc70;
+  border-radius: 5px; /*Kalau radius jangan terlalu gede, nanti kurang bagus */
 }
 
 /* Gaya untuk logo dalam header */
@@ -43,7 +49,7 @@ header.navbar-container .nav-list ul {
   display: flex;
   justify-content: center;
   gap: 2rem 1rem;
-  background-color: #FFCC70; /* Menambahkan background-color */
+  background-color: #ffcc70; /* Menambahkan background-color */
 }
 
 header.navbar-container .nav-list li {
@@ -61,161 +67,165 @@ header.navbar-container .nav-list li a {
 }
 
 header.navbar-container .nav-list li:hover a {
-  background-color: #FFCC70;
+  background-color: #ffcc70;
   color: white;
 }
 
-   
-  main {
-    max-width: 1200px;
-    width: 100%;
-    margin-inline: auto;
-    padding: 2rem 4rem;
-    flex: 1;
-   
-    display: flex;
-    flex-grow;1;
-    height: 100%;
-    align-items: center;
-  }
-  main .content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-  }
-   
-  main .content .content-description {
-    flex: 1 1;
-  }
-   
-  main .content .content-description .title {
-    font-size: 3.5rem;
-    margin-block: 1rem;
-  }
-   
-main .content .content-description p {
-    line-height: 1.7rem;
-    font-size: 1.2rem;
-  }
-   
-  main .content .content-description button {
-    padding: .8rem 2.5rem;
-    margin-block-start: 1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1rem;
-    font-family: 'Quicksand', sans-serif;
-    color: white;
-   
-    border: 3px solid transparent;
-    border-radius: 999px;
-    background-color: #FFCC70;
-    cursor: pointer;
-    transition: all .15s ease-in;
-  }
-   
-  main .content .content-description button:hover {
-    border: 3px solid #2D3E50;
-    color: #2D3E50;
-    background-color: transparent;
-  }
-   
-  main .content .content-image {
-    flex: 1;
-    display: flex;
-  }
-   
-  main .content .content-image img {
-    margin: auto;
-    min-width: 250px;
-    width: 400px;
-  }
-  main aside {
-    position: fixed;
-    inset-block: 0;
-    inset-inline-end: 0;
-  }
-   
-  main aside .social-media {
-    height: 100%;
-    display: flex;
-  }
-   
-  main aside .social-media ul {
-    padding: 1.5rem 1rem;
-    margin: auto;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    background-color: #FFCC70;
-   
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-   
-  main aside .social-media li {
-    list-style-type: none;
-  }
-  main aside .social-media li a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: white;
-    transition: all .1s ease-in-out;
-  }
-   
-  main aside .social-media li a:hover {
-    color: #89b0d9;
-  }
-  .card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-
-    padding: 20px;
-    margin-top: 20px;
-  }
-  .container{
-    display: flex;
-    padding: 5rem; 
-    flex-flow: column nowrap;
-    gap: 1rem 2rem;
-  }
-
-  @media screen and (max-width: 786px) {
-    header.navbar-container .nav-list .menu {
-        display: none;
-    }
-
-    header.navbar-container .nav-list .hamburger-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header.navbar-container .nav-list .hamburger-menu .bar {
-        width: 25px;
-        height: 3px;
-        background-color: #000;
-        margin: 5px 0;
-    }
-    
-
-    header.navbar-container .nav-list .menu.active {
-      display: flex;
-      flex-direction: column; /* Mengubah tampilan menjadi kolom ke bawah */
-      align-items: center;
-      position: absolute;
-      top: 75px;
-      left: auto; 
-      right: 0;
-      background-color: #FFCC70;
-      z-index: 1000;
-      border-radius: 0 0 20px 20px;
-      width: 50%;
-  }
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  /* 
   
+  buat versi mobilenya kalau mau pake style ini
+  
+  padding: 2rem 4rem;
+  */
+  flex: 1;
+
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  align-items: center;
+}
+
+main .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+main .content .content-description {
+  flex: 1 1;
+}
+
+main .content .content-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+}
+
+main .content .content-description {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+
+main .content .content-description button {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #ffcc70;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content .content-description button:hover {
+  border: 3px solid #2d3e50;
+  color: #2d3e50;
+  background-color: transparent;
+}
+
+main .content .content-image {
+  flex: 1;
+  display: flex;
+}
+
+main .content .content-image img {
+  margin: auto;
+  min-width: 250px;
+  width: 400px;
+}
+main aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+
+main aside .social-media {
+  height: 100%;
+  display: flex;
+}
+
+main aside .social-media ul {
+  padding: 1.5rem 1rem;
+  margin: auto;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: #ffcc70;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+main aside .social-media li {
+  list-style-type: none;
+}
+main aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+  color: #89b0d9;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  padding: 20px;
+  margin-top: 20px;
+}
+.container {
+  display: flex;
+  padding: 5rem;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+@media screen and (max-width: 786px) {
+  header.navbar-container .nav-list .menu {
+    display: none;
+  }
+
+  header.navbar-container .nav-list .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header.navbar-container .nav-list .hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+  }
+
+  header.navbar-container .nav-list .menu.active {
+    display: flex;
+    flex-direction: column; /* Mengubah tampilan menjadi kolom ke bawah */
+    align-items: center;
+    position: absolute;
+    top: 75px;
+    left: auto;
+    right: 0;
+    background-color: #ffcc70;
+    z-index: 1000;
+    border-radius: 0 0 20px 20px;
+    width: 50%;
+  }
+
   .menu ul {
     list-style: none;
     padding: 0;
@@ -233,37 +243,31 @@ main .content .content-description p {
     font-weight: bold;
   }
   .content .content-image .logorq {
-    width: 5px; 
+    width: 5px;
     height: auto;
   }
 
   .content-description .judul {
     font-size: 30px;
   }
-  .content-description .keterangan{
+  .content-description .keterangan {
     font-size: 15px;
     padding-left: 1px;
-
   }
-  @media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 480px) {
   .content .content-image .logorq {
       width: 10px; 
     }
   
-    .content .content-description .judul {
+    .content-description .judul {
       font-size: 30px;
     }
     .content-description .keterangan {
-      font-size: 10px;
-      padding-left: 1px;
-    }
-    .content-description .button {
       font-size: 10px;
       padding-left: 1px;
   
     }
   }
 }
-
-
-
