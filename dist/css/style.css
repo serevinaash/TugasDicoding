@@ -23,7 +23,15 @@ header.navbar-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: sticky;
+  position: fixed;
+  header.navbar-container .nav-list ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+  background-color: #ffcc70; /* Menambahkan background-color */
+}
+
   top: 0;
   gap: 2rem;
   z-index: 999;
@@ -68,14 +76,7 @@ main {
   max-width: 1200px;
   width: 100%;
   margin-inline: auto;
-  /* 
-  
-  buat versi mobilenya kalau mau pake style ini
-  
-  padding: 2rem 4rem;
-  */
   flex: 1;
-
   display: flex;
   flex-grow: 1;
   height: 100%;
@@ -97,7 +98,6 @@ main .content .content-description .judul {
   font-size: 2.5rem;
   margin-block: 1rem;
 }
-
 main .content .content-description {
   line-height: 1.7rem;
   font-size: 1.2rem;
@@ -192,36 +192,106 @@ main aside .social-media li a:hover {
 .isi {
   text-align: justify;
 }
-.card .dekan{
-  width: 300px;
-  align-text: center;
-  padding-top:10px
-}
-.circle-frame {
+.container-foto {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 20px;
+  gap: 6rem;
+} 
+
+.frame {
   width: 200px; 
   height: 200px; 
-  overflow: hidden; 
-  display: inline-block; 
+  overflow: hidden;  
   background: #FFCC70;
   border-radius: 10px;
   box-shadow: 0 0 10px black;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin: 0 10px;
 }
 
-.circle-frame img {
+.frame img {
   max-width: 100%; 
   height: 240px;
 }
 
-.mySlides {
-  display: none;
-}
 
-img {
-  width: 100%;
+img{
+  max-width: 600px;
   height: auto;
 }
+.nama{
+  font-size: 15px;
+  display: flex;
+  flex-direction: row; 
+  gap: 4.0rem; 
+  padding-left: 180px;
+  justify-content: center; 
+}
+.posisi{
+  font-size: 15px;
+  display: flex;
+  flex-direction: row; 
+  padding-left: 500px;
+  gap: 200px;
+}
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFCC70;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
 
-/* Add CSS for the slideshow controls if desired */
+.form-group {
+  margin: 10px 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #22668D;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #ffcc70;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  color: #000;
+}
 
 
 @media screen and (max-width: 786px) {
@@ -308,14 +378,37 @@ img {
   
   .content-description .tombol {
     font-size: 14px;
-    margin-top: 10px; /* Menambahkan jarak antara tombol dan kotak */
+    margin-top: 10px; 
   }
   
   .container .box-with-shadow {
     padding-top: 20px;
     gap: 1.5rem;
   }
-  
+  .mySlides img {
+    max-width: 300px;
+}
+  .container-foto {
+    padding-top: 15px;
+  }
+  .nama{
+    font-size: 10px;
+    padding-left: 15px; 
+    text-align: center; 
+  }
+ 
+
+  .container-foto {
+    gap: 1rem;
+  } 
+  .posisi{
+  font-size: 15px;
+  display: flex;
+  flex-direction: row; 
+  padding-left: 50px;
+  gap: 120px;
+}
   main aside {
     align-self: stretch;
   }
+}

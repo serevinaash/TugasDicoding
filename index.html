@@ -6,14 +6,14 @@
     <title>Rumah Quran Saintek</title>
 
     <!-- CSS Utama -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="dist/css/style.css">
     <!-- Font Awesome 5.15.4 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
     <header class="navbar-container">
         <div class="logo">
-            <img src="img/rq2.png" alt="Rumah Quran Saintek">
+            <img src="dist/img/rq2.png" alt="Rumah Quran Saintek">
         </div>
         <nav class="nav-list">
             <div class="hamburger-menu">
@@ -36,28 +36,47 @@
         <section id="Beranda">
             <div class="content">
                 <div class="content-image">
-                    <img src="img/rq3.png" alt="Rumah Quran Saintek" class="logorq">
+                    <img src="dist/img/rq3.png" alt="Rumah Quran Saintek" class="logorq">
                 </div>
                 <div class="content-description">
                     <h1 class="judul">RQ FST</h1>
                     <p class="keterangan">Rumah Quran di bawah naungan fakultas sains dan teknologi di Universitas Islam Sunan Gunung Djati Bandung</p>
-                    <button class="tombol">Lebih Lanjut</button>
+                   <a href="#Tentang"><button class="tombol">Lebih Lanjut</button></a> 
                 </div>
             </div>
         </section>
+         <aside>
+        <div class="social-media">
+        <ul>
+        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </aside>
     </main>
 
     <!-- About Section start -->
     <section id="Tentang">
-        <div class="container">
-            <div class="container-foto">
-                <div class="circle-frame">
-                    <img src="img/dekan.png" alt="Foto Dekan">
-                </div>
-                <div class="nama">
-                    <h4>Dr. Hj. Hasniah Aliah, M.Si</h4>
-                </div>
+        <div class="container-foto">
+            <h1></h1>
+            <div class="frame">
+              <img src="dist/img/dekan.png" alt="Foto Dekan">
             </div>
+            <div class="frame">
+              <img src="dist/img/Pembimbing.jpeg" alt="Fotobuyeti">
+            </div>
+            </div>
+            <div class="nama">
+                <h1>Dr. Hj. Hasniah Aliah, M.Si</h1>
+                <h1>Dr. Hj. Yeti Heryati, S.Ag., M.Pd</h1>
+            </div>   
+            <div class="posisi">
+                <p>Pendiri RQ FST</p>
+                <p>Pembina RQ FST</p>
+            </div>
+            </div>                 
+        <div class="container">
             <article id="tentang" class="card">
                 <h2>Tentang Rumah Quran Sains Dan Teknologi</h2>
                 <p class="isi">Program Rumah Qur’an dilatarbelakangi oleh pentingnya pendidikan al-Qur’an sebagai pendidikan dasar bagi mahasiswa. Hal ini disebabkan al-Qur’an adalah pedoman hidup dan
@@ -72,16 +91,50 @@
 
     <section id="Galeri">
         <div class="container">
+            <h1>Galeri Kegiatan</h1>
             <div class="mySlides">
-                <img src="img/1.jpg" style="width:100%">
+                <img src="dist/img/1.jpg">
             </div>
             <div class="mySlides">
-                <img src="img/2.jpg" style="width:100%">
+                <img src="dist/img/2.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="dist/img/3.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="dist/img/4.jpg">
             </div>
         </div>
     </section>
+    <br><br>
 
-    <script src="script.js"></script>
+    <section id="Kontak">
+        <div class="contact-container">
+            <div class="container">
+            <h1>Contact Us</h1>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <br><br>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Serevina</p>
+        </div>
+    </footer>
     <script>
         // JavaScript untuk menampilkan dan menyembunyikan menu saat ikon hamburger diklik
         const menuIcon = document.querySelector(".hamburger-menu");
