@@ -175,10 +175,10 @@ main aside .social-media li a:hover {
   color: #FFFADD;
 }
 .container{
-  padding-top: 40px;
+  padding : 40px 40px;
   text-align:center;
   padding-right: 15px;
-  padding-left: 15px
+  padding-left: 15px;
 }
 .card {
   box-shadow: 0 0 10px #FFCC70;
@@ -271,8 +271,8 @@ textarea {
 }
 
 button {
-  background-color: #22668D;
-  color: #fff;
+  background-color: black;
+  color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 3px;
@@ -408,6 +408,9 @@ footer {
   padding-left: 10px;
   gap: 120px;
 }
+ footer.footer-contact{
+  padding-top: 50px;
+ }
   main aside {
     align-self: stretch;
   }
