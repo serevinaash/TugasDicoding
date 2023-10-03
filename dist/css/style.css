@@ -219,7 +219,7 @@ main aside .social-media li a:hover {
 
 
 img{
-  max-width: 600px;
+  max-width: 500px;
   height: auto;
 }
 .nama{
@@ -234,8 +234,9 @@ img{
   font-size: 15px;
   display: flex;
   flex-direction: row; 
-  padding-left: 500px;
+  padding-left: 100px;
   gap: 200px;
+  justify-content: center; 
 }
 .contact-container {
   max-width: 600px;
@@ -396,7 +397,6 @@ footer {
     padding-left: 15px; 
     text-align: center; 
   }
- 
 
   .container-foto {
     gap: 1rem;
@@ -405,7 +405,7 @@ footer {
   font-size: 15px;
   display: flex;
   flex-direction: row; 
-  padding-left: 50px;
+  padding-left: 10px;
   gap: 120px;
 }
   main aside {
